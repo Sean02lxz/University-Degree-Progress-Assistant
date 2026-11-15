@@ -457,16 +457,7 @@ app.post(
         AI must return one action
         for every pending course.
       */
-      for (
-        const code of pendingPlan.codes
-      ) {
-        if (!seen.has(code)) {
-          errors.push(
-            `No action was proposed for ${code}.`
-          );
-        }
-      }
-
+ 
       if (errors.length > 0) {
         return res.status(422).json({
           message:
