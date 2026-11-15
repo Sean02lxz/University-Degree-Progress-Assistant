@@ -45,7 +45,6 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
-
 app.use(express.json());
 
 function mapDorisCourseType(courseType) {
@@ -283,8 +282,6 @@ app.get("/api/tools/eligible", (req, res) => {
     getEligibleCourses(term)
   );
 });
-
-
 
 
 app.get(
